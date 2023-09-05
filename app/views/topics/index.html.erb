@@ -1,0 +1,9 @@
+<div>
+    <% @topics.each do |t|%>
+        <%= render t, locals: { topic: t } %>
+        <p><%= link_to "show", t %></p>
+        <br/>
+    <% end %>
+
+    <%= link_to "new", new_topic_path %>
+</div>
